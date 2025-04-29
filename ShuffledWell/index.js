@@ -55,17 +55,22 @@ console.log("============================");
 console.log("Now try it yourself!");
 
 function askForNumbers() {
-  rl.question("Enter a list of numbers (space seperated): ", (input) => {
-    const numbers = input.split(" ").map(Number);
-    if (numbers.some(isNaN)) {
-      console.log("Invalid input. Please enter a list of numbers.");
-      askForNumbers();
-    } else {
-      const result = isShuffledWell(numbers);
-      console.log(`Result: ${result}`);
-      askForNumbers();
+  rl.question(
+    "Enter a list of numbers between 1 and 10 (space seperated): ",
+    (input) => {
+      const numbers = input.split(" ").map(Number);
+      if (numbers.some(isNaN) || numbers.some((num) => num < 1 || num > 10)) {
+        console.log(
+          "Invalid input. Please enter a list of numbers between 1 and 10."
+        );
+        askForNumbers();
+      } else {
+        const result = isShuffledWell(numbers);
+        console.log(`Result: ${result}`);
+        askForNumbers();
+      }
     }
-  });
+  );
 }
 
 askForNumbers();
