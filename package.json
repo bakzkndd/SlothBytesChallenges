@@ -1,0 +1,25 @@
+{
+  "name": "slothbyteschallenges",
+  "version": "1.0.0",
+  "description": "all those cool challenges from the lazy guy",
+  "homepage": "https://github.com/bakzkndd/SlothBytesChallenges#readme",
+  "bugs": {
+    "url": "https://github.com/bakzkndd/SlothBytesChallenges/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bakzkndd/SlothBytesChallenges.git"
+  },
+  "license": "MIT",
+  "author": "bakzkndd",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.9.0",
+    "i": "^0.3.7",
+    "npm": "^11.6.0"
+  }
+}
